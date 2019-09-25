@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!--
+http://mybatis.org/generator/configreference/xmlconfig.html
+http://mybatis.org/generator/usage/mysql.html
+
+execute: http://mybatis.org/generator/running/runningWithMaven.html
+-->
+<generatorConfiguration>
+
+    <context id="mysqlTables" targetRuntime="MyBatis3Simple">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306"
+                        userId="root"
+                        password="root">
+            <property name="nullCatalogMeansCurrent" value="true"/> <!--  for Connector/J 8.x  -->
+        </jdbcConnection>
+
+
+        <javaModelGenerator targetPackage="com.practice.biztech.mix.entity" targetProject=".\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.practice.biztech.mix.mapper" targetProject=".\src\main\resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.practice.biztech.mix.dal"
+                             targetProject=".\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table schema="world" tableName="city">
+            <generatedKey column="ID" sqlStatement="MYSQL" identity="true"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
