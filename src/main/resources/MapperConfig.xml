@@ -7,18 +7,18 @@
     <!-- Setup the transaction manager and data source that are
          appropriate for your environment
     -->
-    <environments default="...">
-        <environment id="...">
-            <transactionManager type="...">
-            </transactionManager>
-            <dataSource type="...">
-            </dataSource>
-        </environment>
-    </environments>
+<!--    <environments default="...">-->
+<!--        <environment id="...">-->
+<!--            <transactionManager type="...">-->
+<!--            </transactionManager>-->
+<!--            <dataSource type="...">-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
 
     <mappers>
         <!-- XML mapper files should be listed here -->
-        <mapper resource="test/xml/MyTable_SqlMap.xml"/>
+        <mapper resource="com/practice/biztech/mix/mapper/CityMapper.xml"/>
     </mappers>
 
 </configuration>
