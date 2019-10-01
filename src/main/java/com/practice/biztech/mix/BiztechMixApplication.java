@@ -7,7 +7,7 @@ import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
 @EnableCaching
-@MapperScan("com.practice.biztech.mix.dal")
+@MapperScan(basePackages = "com.practice.biztech.mix.dal")
 public class BiztechMixApplication {
 
     public static void main(String[] args) {
