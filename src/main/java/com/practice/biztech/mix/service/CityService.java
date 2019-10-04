@@ -7,4 +7,6 @@ import java.util.List;
 public interface CityService {
 
     List<City> listAllCity();
+
+    boolean save(City city);
 }

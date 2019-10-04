@@ -1,6 +1,7 @@
 package com.practice.biztech.mix.dal;
 
 import com.practice.biztech.mix.entity.City;
+
 import java.util.List;
 
 public interface CityMapper {
